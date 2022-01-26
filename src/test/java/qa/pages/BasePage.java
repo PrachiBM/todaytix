@@ -26,13 +26,19 @@ public class BasePage {
         driver.quit();
     }
 
-    public void clickElement(WebElement element){
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+    public void clickElement(WebElement element) {
+        wait.until(ExpectedConditions.visibilityOf(element));
         element.click();
     }
 
-    public boolean isElementVisible(WebElement element){
+    public boolean isElementVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
         return element.isDisplayed();
+    }
+
+    public void enterKeys(WebElement element, String value) {
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        System.out.println("step 4");
+        element.sendKeys(value);
     }
 }

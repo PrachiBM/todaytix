@@ -15,4 +15,16 @@ public class HomePageSteps {
     public void verifyApplicationHomePage() {
         Assert.assertTrue(homePage.verifyHomePageVisible());
     }
+
+    @Given("^User selects the ([^\"]*) city$")
+    public void selectCity(String city) {
+        homePage.selectCity(city);
+    }
+
+    @Given("^User selects ([^\"]*) show$")
+    public void searchShow(String show) {
+        System.out.println("step 2");
+        homePage.searchShow(show);
+    }
+
 }

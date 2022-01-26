@@ -3,4 +3,5 @@ Feature: Automate Booking
 
   Scenario: 1. Update later
     Given User in on application home page
-#    When User selects "New York"
+    And User selects the New York city
+    And User selects The Phantom of the Opera show
