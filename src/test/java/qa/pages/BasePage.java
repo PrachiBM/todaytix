@@ -28,17 +28,21 @@ public class BasePage {
 
     public void clickElement(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
 
     public boolean isElementVisible(WebElement element) {
-        wait.until(ExpectedConditions.visibilityOf(element));
+        try {
+            wait.until(ExpectedConditions.visibilityOf(element));
+        } catch (Exception e) {
+        }
         return element.isDisplayed();
     }
 
     public void enterKeys(WebElement element, String value) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
-        System.out.println("step 4");
+        element.clear();
         element.sendKeys(value);
     }
 }
