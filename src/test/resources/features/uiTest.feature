@@ -1,7 +1,7 @@
 @test
 Feature: Automate Booking
 
-  Scenario: 1. Update later
+  Scenario: 1. User Journey for booking tickets
     Given User in on application home page
     When User selects the New York city
     Then User searches The Phantom of the Opera show
