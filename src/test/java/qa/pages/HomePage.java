@@ -41,10 +41,13 @@ public class HomePage extends BasePage {
     @FindBy(how = How.XPATH, using = "//a[text()=\"Skip for now\"]")
     private WebElement modalSkipButton;
 
-    @FindBy(how = How.XPATH, using = "//*[text()=\"January\"]")
-    private WebElement january;
+//    @FindBy(how = How.XPATH, using = "//*[text()=\"January\"]")
+//    private WebElement january;
 
-    @FindBy(how = How.XPATH, using = "//*[text()=\"January\"]//parent::span//following-sibling::div")
+    @FindBy(how = How.XPATH, using = "//*[text()=\"February\"]")
+    private WebElement february;
+
+    @FindBy(how = How.XPATH, using = "//*[text()=\"February\"]//parent::span//following-sibling::div")
     private WebElement rightArrow;
 
     @FindBy(how = How.XPATH, using = "//*[text()=\"24\"]")
@@ -119,7 +122,7 @@ public class HomePage extends BasePage {
     }
 
     public boolean verifyCalendarDisplayed() {
-        return isElementVisible(january);
+        return isElementVisible(february);
     }
 
     public void selectDate() {
